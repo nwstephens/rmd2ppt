@@ -1,0 +1,16 @@
+---
+title: A Demonstration File
+subtitle: From Pandoc Markdown to Powerpoint
+author: Jesse Rosenthal <jrosenthal@jhu.edu>
+date: December 6, 2017
+output: powerpoint_presentation
+---
+
+## Two hash
+
+### Three hashes
+
+text
+
+# One hash
+
