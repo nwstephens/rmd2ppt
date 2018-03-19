@@ -1,6 +1,8 @@
 
 ## R Markdown to PowerPoint
 
+![](ppt.png)
+
 You can create PowerPoint presentations from R Markdown files using RStudio. Warning: This feature is experimental; do not attempt current or production systems. The following instructions have been tested for Linux.
 
 ### Install
