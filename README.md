@@ -1,24 +1,46 @@
-# Sample Input and Output
 
-These files describe input R Markdown documents and an example PowerPoint output. 
+## R Markdown to PowerPoint
 
-## Input 
+You can create PowerPoint presentations from R Markdown files using RStudio. Warning: This feature is experimental; do not attempt current or production systems. The following instructions have been tested for Linux.
 
-The input R Markdown include two file formats:
+### Install
 
-* [iolides](ioslides_input_with_shiny.Rmd) which renders [here](http://colorado.rstudio.com:3939/content/314/). This includes a Shiny app on the last slide.
-* [notebook](document_input.Rmd) which renders [here](http://colorado.rstudio.com:3939/content/313/sampleInput.nb.html). This does not include a Shiny app.
+#### Pandoc
 
-## Output
+You will need to manually install and link to the latest version of Pandoc. Eventually Pandoc 2 will be bundled into the IDE, but for now, this remains a manual process. Warning: Changing the location of your Pandoc installation may break your code.
 
-The output file is a PowerPoint presentation called `powerpoint_output.pptx`. The PowerPoint presentation contains the following features:
+```
+wget https://github.com/jgm/pandoc/releases/download/2.1.2/pandoc-2.1.2-linux.tar.gz
+tar xzvf pandoc-2.1.2-linux.tar.gz
+ln -s /opt/pandoc-2.1.2/bin/pandoc /usr/local/bin/pandoc
+```
 
-* Source code. Click this button to download source code. Used for reproducibility and makes it similar to R Markdown notebooks. This feature is optional (Is it even possible?)
-* Text rendered in markdown. This includes hyperlinks, bullets, tables, and other standard markdown formatting. This is a required feature.
-* Code and code output. This includes all R code and output from the console. This is an optional feature.
-* Various plots with hyperlinks. This would include base graphics, ggplot2, and all other static graphics. This is a required feature. The images can also be linked to a hosted version online. This allows user to save low resolution images to PowerPoint while preserving high resolutions online. This second feature is optional.
-* HTML Widgets with hyperlinks. Screenshots of the htmlwidgets with hyperlinks back to the hosted images allow developers to point their audience to interactive visualizations. This feature is optional.
-* Shiny web apps with hyperlinks. Like HTML widgets, these apps would be hosted online but would be rendered as static images with a hyperlink. This feature is also optional.
+#### R packages
 
+You should also upgrade the rmarkdown and knitr packages. You will want to install the webshot package so you can take screenshots of your Shiny apps and include them in your presentations.
 
+```
+> install.packages('rmarkdown')
+> install.packages('knitr')
+> install.packages("webshot")
+> webshot::install_phantomjs()
+```
 
+#### RStudio 1.2
+
+Version 1.2 of RStudio contains user features for creating PowerPoint presentations. Currently, RStudio 1.2 is also experimental. You can upgrade to the latest version of RStudio by downloading and installing the [daily builds](https://dailies.rstudio.com/).
+
+### Demos
+
+This package contains demos for creating PowerPoint presentations from R Markdown. All standard markdown format is supported in the PowerPoint output, as well as some nice features, including:
+
+* Bullets and numbering
+* Multiple columns
+* Linked images
+* Equations
+* Code
+* Text formatting
+* Tables
+* Templates
+
+Note that if you want to change the slide dimensions or any other aesthetics, you should make those changes in the PowerPoint template.

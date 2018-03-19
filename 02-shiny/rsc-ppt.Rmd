@@ -1,0 +1,25 @@
+---
+title: RStudio Connect and PowerPoint
+output: powerpoint_presentation
+---
+
+# Overview
+
+Your PowerPoint slides can point viewers to live content on RStudio Connect. You will need to install webshot and PhantomJS:
+
+```{r, eval=FALSE}
+install.packages("webshot")
+webshot::install_phantomjs()
+```
+
+Then use `knitr::include_app('<URL>')` in an R code chunk. The render process will automatically take a screenshot of your app and link the image to your hosted app.
+
+# Example
+
+```{r cache=TRUE, screenshot.opts=list(delay=1), echo=FALSE, fig.cap="Click to open"}
+knitr::include_app('http://colorado.rstudio.com/rsc/content/831/')
+```
+
+
+
+

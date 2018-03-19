@@ -1,0 +1,92 @@
+---
+title: Using R with PowerPoint
+subtitle: With R Markdown
+author: Nathan Stephens <nathan@rstudio.com>
+output: powerpoint_presentation
+---
+
+```{r, include=FALSE, message=FALSE, cache=TRUE}
+download.file("https://ih1.redbubble.net/image.152117815.0966/flat,800x800,075,t.u1.jpg", "buzz.jpg")
+```
+
+# The basics
+
+## Title
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+## Multicolumn
+
+:::::::::::::: {.columns}
+::: {.column}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+:::
+::: {.column}
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+:::
+::::::::::::::
+
+# Images
+
+## Image
+
+![](buzz.jpg)
+
+## Image with linked caption
+
+![[This caption links to www.rstudio.com](https://www.rstudio.com)](buzz.jpg)
+
+## Linked image
+
+[![](buzz.jpg)](https://www.rstudio.com)
+
+## R Plots
+
+```{r, echo=FALSE}
+plot(mtcars)
+```
+
+## Multicolumn
+
+:::::::::::::: {.columns}
+::: {.column}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+:::
+::: {.column}
+![This is a simple caption](buzz.jpg)
+:::
+::::::::::::::
+
+# Tables
+
+## Simple Table
+
+  Right     Left   Center       Default
+-------     ------ ----------   -------
+     12     12        12            12
+    123     123       123          123
+      1     1          1             1
+
+## R Table
+
+```{r, echo=FALSE}
+knitr::kable(head(iris))
+```
+
+# Shiny
+
+## Shiny app with linked image
+
+```{r shinylink, echo=FALSE, fig.width=15, cache=TRUE, screenshot.opts=list(delay=5)}
+knitr::include_app('http://colorado.rstudio.com/rsc/content/790/', height = "20px")
+```
+
+# HTML Widgets
+
+## Dygraph
+
+```{r echo=FALSE, fig.height=3, fig.width=6}
+library(dygraphs)
+dygraph(nhtemp, main = "New Haven Temperatures") %>% 
+  dyRangeSelector(dateWindow = c("1920-01-01", "1960-01-01"))
+```
