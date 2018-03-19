@@ -20,10 +20,10 @@ ln -s /opt/pandoc-2.1.2/bin/pandoc /usr/local/bin/pandoc
 You should also upgrade the rmarkdown and knitr packages. You will want to install the webshot package so you can take screenshots of your Shiny apps and include them in your presentations.
 
 ```
-> install.packages('rmarkdown')
-> install.packages('knitr')
-> install.packages("webshot")
-> webshot::install_phantomjs()
+install.packages('rmarkdown')
+install.packages('knitr')
+install.packages("webshot")
+webshot::install_phantomjs()
 ```
 
 #### RStudio 1.2
