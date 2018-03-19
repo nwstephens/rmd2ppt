@@ -3,7 +3,7 @@
 
 ![](rmd2ppt.png)
 
-You can create PowerPoint presentations from R Markdown files using RStudio. Warning: This feature is experimental; do not attempt current or production systems. The following instructions have been tested for Linux.
+You can create PowerPoint presentations from R Markdown files using RStudio. **Warning: This feature is experimental; do not attempt current or production systems. The following instructions have been tested for Linux.**
 
 ### Install
 
@@ -34,15 +34,15 @@ RStudio v1.2 contains additional user features for creating PowerPoint presentat
 
 ### Demos
 
-This package contains demos for creating PowerPoint presentations from R Markdown. All standard markdown format is supported in the PowerPoint output, as well as some nice features, including:
+This repository contains demos for creating PowerPoint presentations from R Markdown. All standard markdown format is supported in the PowerPoint output, as well as some nice features like templating. Here is a partial list of features included in the PowerPoint translation::
 
 * Bullets and numbering
-* Multiple columns
-* Linked images
 * Equations
-* Code
+* Code blocks
 * Text formatting
 * Tables
+* Linked images
+* Multiple columns
 * Templates
 
 See the [Pandoc manual](http://pandoc.org/MANUAL.html) for specific support options. Note that if you want to change the slide dimensions or any other aesthetics, you should make those changes in the PowerPoint template.
