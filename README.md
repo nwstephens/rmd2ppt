@@ -44,5 +44,6 @@ This repository contains demos for creating PowerPoint presentations from R Mark
 * Linked images
 * Multiple columns
 * Templates
+* Presenter notes
 
 See the [Pandoc manual](http://pandoc.org/MANUAL.html) for specific support options. Note that if you want to change the slide dimensions or any other aesthetics, you should make those changes in the PowerPoint template.
