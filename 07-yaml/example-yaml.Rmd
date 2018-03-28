@@ -1,0 +1,23 @@
+---
+title: "Untitled"
+output: 
+  powerpoint_presentation:
+    slide_level: 2
+    reference_doc: rstudio-widescreen.pptx
+---
+
+```{r, eval=FALSE, include=FALSE}
+devtools::install_github("rstudio/rmarkdown")
+```
+
+# section header
+
+Section text
+
+## Slide 1
+
+Slide 1 text
+
+## Slide 2
+
+Slide 2

@@ -5,7 +5,7 @@ author: RStudio Inc. <info@rstudio.com>
 date: Mar 18, 2017
 output: 
   powerpoint_presentation:
-    pandoc_args: --reference-doc=rstudio.pptx
+    pandoc_args: --reference-doc=rstudio-widescreen.pptx
 ---
 
 ```{r setup, include=FALSE}
@@ -49,6 +49,15 @@ Our model of the tools needed in a typical data science project looks something 
 * Visualize
 * Model
 * Communicate
+
+::: notes
+here are my notes
+
+- a
+- b
+- c
+
+:::
 
 # Visualize
 

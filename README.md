@@ -12,10 +12,15 @@ You can create PowerPoint presentations from R Markdown files using RStudio. *Wa
 [Pandoc](http://pandoc.org/) now has support the PowerPoint format (as of [v2.0.6](http://pandoc.org/releases.html)). The current version of RStudio (v1.1) bundles Pandoc v1, but the next major release of RStudio (v1.2) will bundle Pandoc 2. In the meantime, you will need to manually install and link to the latest version of Pandoc. *Warning: Changing the location of your Pandoc installation may break your code and your system; do not attempt unless you are comfortable with making changes to Pandoc.*
 
 ```
-wget https://github.com/jgm/pandoc/releases/download/2.1.2/pandoc-2.1.2-linux.tar.gz
-tar xzvf pandoc-2.1.2-linux.tar.gz
-ln -s /opt/pandoc-2.1.2/bin/pandoc /usr/local/bin/pandoc
+# Install Pandoc devel
+version=2.1.3
+sudo wget https://github.com/jgm/pandoc/releases/download/$version/pandoc-$version-linux.tar.gz -P /opt
+sudo tar xzvf /opt/pandoc-$version-linux.tar.gz -C /opt
+sudo rm /usr/local/bin/pandoc
+sudo ln -s /opt/pandoc-$version/bin/pandoc /usr/local/bin/pandoc
 ```
+
+You can always check what version of Pandoc you have in R by running `> rmarkdown::pandoc_version()`.
 
 #### R packages
 
