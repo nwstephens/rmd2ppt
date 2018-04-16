@@ -1,5 +1,5 @@
 ---
-title: "YAML"
+title: "PowerPoint"
 output: 
   powerpoint_presentation:
     slide_level: 2
